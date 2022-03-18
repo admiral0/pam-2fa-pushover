@@ -1,0 +1,16 @@
+[package]
+name = "pam-2fa-pushover"
+version = "0.1.0"
+edition = "2021"
+authors = ["Radu Andries"]
+
+[lib]
+name = "pam_2fa_pushover"
+crate-type = ["cdylib"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pam = { git = "https://github.com/anowell/pam-rs.git" }
+pushover = { git = "https://github.com/deliriouspenguin/pushover.git", branch = "convert_to_rust_2018" }
+rand = "0.8.4"
+gethostname = "0.2.3"
